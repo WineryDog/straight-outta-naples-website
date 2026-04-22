@@ -1,0 +1,65 @@
+https://carosello.com.au/
+
+Palette:
+
+Azzurro Napoli: #0076B9
+
+Verde Tricolore: #00A650
+
+Rosso brand: #AD101F
+
+Bruno scuro: #4A3C2A
+
+Marrone medio: #997F68
+
+Oro principale: #CDA972
+
+Oro brillante: #E8BF6C
+
+Sfondo crema: #F8F8F8
+
+Beige neutro: #D8C7A8
+
+Testo scuro: #3A3A3A
+
+Programma:
+
+Fase 1: Setup, Architettura e Design System
+Inizializzazione: Crea il progetto con Vite (React) e installa react-router-dom e tailwindcss.
+
+Struttura Cartelle: Organizza la directory separando /routes (per la gestione dei path), /pages (viste intere) e /components (moduli riutilizzabili e atomici).
+
+Tipografia: Carica tramite CDN in index.html il font display serif evocativo (es. Playfair Display o Zodiak) e il body sans-serif (es. Satoshi). Implementa la fluid type scale utilizzando Tailwind.
+
+Gestione Tema e Colori: Definisci le variabili CSS nel file index.css (inclusi i colori napoletani e l'eventuale supporto light/dark mode). Collega queste variabili al file tailwind.config.js in modo da usare classi utility dinamiche.
+
+Fase 2: Componenti Globali
+Navbar / Header: Crea un componente React dedicato. Inserisci il logo SVG inline, i link di navigazione (tramite <Link> di React Router) e un CTA "Prenota ora" sticky. Su mobile, implementa un hamburger menu gestendo lo stato aperto/chiuso con useState.
+
+Footer: Componente strutturato con indirizzo, orari, link social (Instagram, Facebook), mappa Google (embed o link) e link istituzionali (Privacy Policy).
+
+Fase 3: Layout Pagina Principale (Mobile-First)
+Hero Section (Fullscreen): Sfondo multimediale (immagine o video) con overlay scuro. Aggiungi l'headline principale (il claim del ristorante) e due CTA ("Prenota ora" e "Asporto") che si impilano verticalmente su schermi piccoli. Inserisci uno scroll hint animato in basso.
+
+Sezione Signature Dish: Layout responsivo usando le classi Grid di Tailwind (stack verticale su mobile, due colonne su desktop) per presentare foto e descrizione del piatto forte. Includi un badge visivo con il colore "accent".
+
+Slideshow Ambienti: Implementa un carosello di immagini (valuta librerie compatibili con React come Swiper.js) con touch swipe nativo per mobile e indicatori di navigazione ottimizzati per il tocco.
+
+Sezione What's On: Griglia di card per gli eventi attivi. Struttura ogni card con immagine, titolo e badge categoria. Su mobile abilita lo scroll orizzontale della riga. Aggiungi un CTA "View all events".
+
+Sezione Private Events: Layout asimmetrico (immagine a sinistra, testo a destra su desktop). Elenca le tipologie di eventi (compleanni, corporate) con design a "pillola" e inserisci il CTA di richiesta informazioni.
+
+FAQ Accordion: Lista interattiva. Gestisci l'apertura tramite stato React, assicurandoti che l'intera riga sia tappabile. Usa Tailwind per animazioni di transizione fluide (es. max-h-0 a max-h-screen) e icone +/- reattive.
+
+Recensioni: Slider o layout orizzontale swipeable su mobile con i testimonial dei clienti e la componente visiva a 5 stelle.
+
+Fase 4: Ottimizzazioni e UX
+Target Touch: Verifica che tutti i bottoni interattivi, frecce di navigazione e voci del menu abbiano un'area cliccabile minima di 44x44px.
+
+Test Breakpoint: Testa accuratamente l'interfaccia con le utility responsive di Tailwind ai breakpoint chiave (375px, 390px, 768px, 1024px+).
+
+Media e Performance: Applica loading="lazy" e dimensioni fisse (width/height) a tutte le immagini per prevenire il Cumulative Layout Shift (CLS).
+
+Feedback di Interazione: Definisci chiaramente gli stati :active (per il feedback al tocco su mobile) e :hover (per desktop) su tutti gli elementi cliccabili.
+
+Animazioni Accessibili: Aggiungi animazioni allo scroll (es. fade-in, slide-up), assicurandoti di utilizzare le varianti motion-safe: di Tailwind per rispettare le preferenze di prefers-reduced-motion degli utenti.

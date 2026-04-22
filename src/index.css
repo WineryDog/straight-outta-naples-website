@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   Raw palette — reference vars for plain CSS.
+   These are the source of truth for all colors.
+   ───────────────────────────────────────────── */
+:root {
+  --palette-azzurro-napoli:  #0076B9;
+  --palette-verde-tricolore: #00A650;
+  --palette-rosso-brand:     #AD101F;
+  --palette-bruno-scuro:     #4A3C2A;
+  --palette-marrone-medio:   #997F68;
+  --palette-oro-principale:  #CDA972;
+  --palette-oro-brillante:   #E8BF6C;
+  --palette-sfondo-crema:    #F8F8F8;
+  --palette-beige-neutro:    #D8C7A8;
+  --palette-testo-scuro:     #3A3A3A;
+}
+
+/* ─────────────────────────────────────────────
+   Tailwind v4 theme — replaces tailwind.config.js.
+   `inline` keyword forwards the CSS var reference
+   so utilities use the live :root value (runtime
+   theming ready).
+
+   Generated utilities:
+     Colors  → bg-*, text-*, border-*, ring-* …
+     Fonts   → font-display, font-sans
+     Sizes   → text-xs … text-5xl (fluid / clamp)
+   ───────────────────────────────────────────── */
+@theme inline {
+  /* Colors */
+  --color-azzurro:  var(--palette-azzurro-napoli);
+  --color-verde:    var(--palette-verde-tricolore);
+  --color-rosso:    var(--palette-rosso-brand);
+  --color-bruno:    var(--palette-bruno-scuro);
+  --color-marrone:  var(--palette-marrone-medio);
+  --color-oro:      var(--palette-oro-principale);
+  --color-oro-bright: var(--palette-oro-brillante);
+  --color-crema:    var(--palette-sfondo-crema);
+  --color-beige:    var(--palette-beige-neutro);
+  --color-testo:    var(--palette-testo-scuro);
+
+  /* Font families */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans:    "Satoshi", system-ui, sans-serif;
+
+  /* Fluid type scale — clamp(min, preferred, max)
+     viewport range: 390px → 1440px              */
+  --text-xs:   clamp(0.75rem,   0.714rem + 0.179vw, 0.875rem);
+  --text-sm:   clamp(0.875rem,  0.833rem + 0.208vw, 1rem);
+  --text-base: clamp(1rem,      0.952rem + 0.238vw, 1.125rem);
+  --text-lg:   clamp(1.125rem,  1.042rem + 0.417vw, 1.375rem);
+  --text-xl:   clamp(1.25rem,   1.131rem + 0.595vw, 1.625rem);
+  --text-2xl:  clamp(1.5rem,    1.333rem + 0.833vw, 2rem);
+  --text-3xl:  clamp(1.875rem,  1.583rem + 1.458vw, 2.75rem);
+  --text-4xl:  clamp(2.25rem,   1.833rem + 2.083vw, 3.5rem);
+  --text-5xl:  clamp(3rem,      2.333rem + 3.333vw, 5rem);
+}

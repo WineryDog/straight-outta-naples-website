@@ -1,0 +1,21 @@
+
+Azzurro Napoli: #0076B9
+
+Verde Tricolore: #00A650
+
+Rosso brand: #AD101F
+
+Bruno scuro: #4A3C2A
+
+Marrone medio: #997F68
+
+Oro principale: #CDA972
+
+Oro brillante: #E8BF6C
+
+Sfondo crema: #F8F8F8
+
+Beige neutro: #D8C7A8
+
+Testo scuro: #3A3A3A
+

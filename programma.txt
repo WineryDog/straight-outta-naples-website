@@ -1,0 +1,84 @@
+1. Setup progetto e fondamenta
+Crea la struttura file: carosello-replica/carosello.html + assets/
+
+Definisci il design system in <style>: palette colori caldi italiani (rosso scuro, crema, verde oliva), fluid type scale con clamp(), spacing tokens 4px, variabili CSS per light/dark mode
+
+Scegli font: display serif evocativo (es. Playfair Display o Zodiak da Fontshare) + body sans-serif leggibile (es. Satoshi) e caricali via CDN
+
+2. Navbar / Header
+Logo SVG custom inline + nome ristorante
+
+Link di navigazione principali (Menu, Prenota, Asporto, Contatti)
+
+CTA primario "Prenota ora" sticky e visibile su mobile
+
+Hamburger menu a comparsa su mobile con overlay
+
+3. Hero Section (fullscreen)
+Immagine/video di sfondo fullscreen o overlay scuro su foto pizza/interni
+
+Headline grande con il claim principale ("Australia's longest running pizza restaurant")
+
+Due CTA affiancati: "Prenota ora" + "Asporto" → su mobile si impilano verticalmente
+
+Scroll hint animato in basso
+
+4. Sezione Piatto Firma (Signature Dish)
+Layout a due colonne: foto piatto | testo descrittivo — su mobile diventa stack verticale
+
+Badge/chip "Signature dish" con accent color
+
+Testo descrittivo del Tiramisu al pistacchio
+
+5. Sezione Slideshow "Ambienti"
+Carosello/slider di immagini dell'atmosfera interna del ristorante
+
+Touch swipe abilitato su mobile
+
+Indicatori di navigazione (dots o frecce) con tap target ≥44px
+
+6. Sezione "What's On" (eventi)
+Card griglia per eventi in corso: immagine + titolo + badge categoria
+
+Link "View all events" come CTA secondario
+
+Su mobile: scroll orizzontale delle card o stack verticale
+
+7. Sezione Funzioni & Private Events
+Layout asimmetrico: immagine grande a sinistra, testo a destra
+
+Elenco tipi di eventi (compleanno, matrimoni, corporate) come pill/badge
+
+CTA "Richiedi informazioni"
+
+8. FAQ Accordion
+Lista domande/risposte espandibili con animazione smooth (max-height o clip-path)
+
+Touch-friendly: tutta la riga è tappabile
+
+Icona + / − animata per stato aperto/chiuso
+
+9. Sezione Recensioni
+Slider o griglia di testimonial con nome cliente + testo review
+
+Star rating (5 stelle) visuale
+
+Su mobile: carosello orizzontale swipeable
+
+10. Footer
+Indirizzo, orari, link social (Instagram, Facebook)
+
+Mappa Google embed o link diretto
+
+Copyright + link Privacy Policy
+
+11. Ottimizzazioni mobile-first finali
+Verifica touch target ≥44px su tutti i bottoni e link interattivi
+
+Test a 375px, 390px, 768px, 1024px+
+
+Lazy loading su tutte le immagini (loading="lazy" + width/height)
+
+:active state su tutti gli elementi interattivi per feedback tap
+
+Animazioni scroll (fade-in/slide-up) con rispetto di prefers-reduced-motion
