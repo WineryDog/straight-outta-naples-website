@@ -1,86 +1,64 @@
-import { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import viteLogo from '../assets/vite.svg'
+import { Link } from 'react-router'
+import { serviceInfo } from '../constants'
 import heroImg from '../assets/hero.png'
 
 export default function HomePage() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <HeroSection />
     </>
+  )
+}
+
+function HeroSection() {
+  return (
+    <section className="relative h-svh min-h-[600px] w-full flex flex-col items-center justify-center overflow-hidden">
+
+      {/* Background image */}
+      <img
+        src={heroImg}
+        alt="Pizza background"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        width={1920}
+        height={1080}
+        fetchPriority="high"
+      />
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-6 md:gap-8 text-center">
+
+        <p className="font-sans text-xs sm:text-sm tracking-[0.2em] uppercase text-oro-bright/90">
+          {serviceInfo.name}
+        </p>
+
+        {/* Aggiunto text-balance per evitare che il testo "rompa" il layout e si adatti meglio */}
+        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-tight sm:leading-tight lg:leading-tight text-balance">
+          The authentic soul of Naples,<br className="hidden sm:block" /> your new favorite pizza
+        </h1>
+
+        <p className="font-sans text-sm sm:text-base text-white/75 w-full max-w-xl text-balance">
+          {serviceInfo.description}
+        </p>
+
+        {/* CTAs — stack vertical on mobile, row on sm+ */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4 md:mt-6">
+          <Link
+            to="/menu"
+            className="min-h-[48px] flex items-center justify-center px-8 py-3 rounded-full bg-oro text-bruno font-sans font-semibold text-sm tracking-wide transition-colors duration-150 hover:bg-oro-bright active:scale-95"
+          >
+            Menu
+          </Link>
+          <Link
+            to="/order"
+            className="min-h-[48px] flex items-center justify-center px-8 py-3 rounded-full border-2 border-white/70 text-white font-sans font-semibold text-sm tracking-wide transition-colors duration-150 hover:bg-white/10 active:scale-95"
+          >
+            Book Now
+          </Link>
+        </div>
+      </div>
+    </section>
   )
 }
