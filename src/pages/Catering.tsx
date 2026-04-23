@@ -15,7 +15,7 @@ export default function Catering() {
         <div className="grid grid-cols-1 lg:grid-cols-12">
           <div className="lg:col-span-8 lg:col-start-3 flex flex-col gap-6">
 
-            <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl text-testo leading-tight">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl text-testo leading-tight">
               BRING {serviceInfo.name.toUpperCase()} TO <span className='text-amber-700'> YOUR TABLE</span>
             </h2>
 

@@ -71,12 +71,12 @@ export default function EventsCta() {
           {/* ── Content column ───────────────────────────── */}
           <div className="w-full lg:w-1/2 flex flex-col gap-5 text-center lg:text-left">
 
-            <p className="font-sans text-xs tracking-[0.2em] uppercase text-oro font-semibold">
+            <p className="font-sans text-xs tracking-[0.2em] uppercase text-oro-bright font-semibold">
               Celebrate with us
             </p>
 
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-crema leading-tight">
-              A slice of Naples for your next celebration
+              A slice of Naples for <span className='text-oro-bright'>your next celebration</span>
             </h2>
 
             <p className="font-sans text-base text-crema/80 leading-relaxed max-w-lg mx-auto lg:mx-0">

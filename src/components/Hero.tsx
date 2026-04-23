@@ -28,7 +28,7 @@ export function HeroSection() {
 
         {/* Aggiunto text-balance per evitare che il testo "rompa" il layout e si adatti meglio */}
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-tight sm:leading-tight lg:leading-tight text-balance">
-          The authentic soul of Naples,<br className="hidden sm:block" /> your new favorite pizza
+          The authentic soul of Naples,<br className="hidden sm:block" /> your new <span className='text-oro-bright/90'>favorite pizza</span>
         </h1>
 
         <p className="font-sans text-sm sm:text-base text-white/75 w-full max-w-xl text-balance">
