@@ -1,9 +1,9 @@
 import { Link } from 'react-router'
 
-import img1 from '../assets/interior-1.jpg'
-import img2 from '../assets/interior-2.jpg'
-import img3 from '../assets/interior-3.jpg'
-import img4 from '../assets/interior-4.jpg'
+import img1 from '../assets/interior-1.webp'
+import img2 from '../assets/interior-2.webp'
+import img3 from '../assets/interior-3.webp'
+import img4 from '../assets/interior-4.webp'
 
 export default function EventsCta() {
   return (

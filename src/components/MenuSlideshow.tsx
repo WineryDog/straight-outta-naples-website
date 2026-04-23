@@ -4,12 +4,12 @@ import { Autoplay } from 'swiper/modules';
 
 // @ts-ignore
 import 'swiper/css';
-import img1 from '../assets/menu-1.jpg'
-import img2 from '../assets/menu-2.jpg'
-import img3 from '../assets/menu-3.jpg'
-import img4 from '../assets/menu-4.jpg'
-import img5 from '../assets/menu-5.jpg'
-import img6 from '../assets/menu-6.jpg'
+import img1 from '../assets/menu-1.webp'
+import img2 from '../assets/menu-2.webp'
+import img3 from '../assets/menu-3.webp'
+import img4 from '../assets/menu-4.webp'
+import img5 from '../assets/menu-5.webp'
+import img6 from '../assets/menu-6.webp'
 
 const SLIDES = [
   { src: img1, alt: 'Autentica Pizza Margherita' },

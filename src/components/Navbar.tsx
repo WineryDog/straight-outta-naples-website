@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.webp'
 
 const NAV_LINKS = [
   { label: 'Menu',         to: '/menu' },
