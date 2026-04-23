@@ -4,7 +4,7 @@ export default function ComingSoon() {
   return (
     <section className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4 bg-crema">
       <h1 className="font-display text-4xl text-stone-900 mb-4">
-        Our dough is still rising...
+        Our dough is <span className='text-amber-700'>still rising...</span>
       </h1>
       <p className="font-sans text-base text-stone-600 max-w-md mb-8 leading-relaxed">
         Just like the perfect Neapolitan pizza, this page needs a little more time to rest.
