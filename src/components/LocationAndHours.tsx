@@ -1,4 +1,5 @@
 import { OpeningHours } from './OpeningHours'
+import { serviceInfo } from '../constants'
 
 export default function LocationAndHours() {
   return (
@@ -14,7 +15,7 @@ export default function LocationAndHours() {
             <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-md">
               <iframe
                 title="Restaurant location"
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3152.0!2d144.963!3d-37.814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzfCsDQ4JzUwLjQiUyAxNDTCsDU3JzQ2LjgiRQ!5e0!3m2!1sen!2sau!4v1700000000000"
+                src={serviceInfo.mapsEmbedSrc}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

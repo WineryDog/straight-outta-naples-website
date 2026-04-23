@@ -16,6 +16,14 @@ function IconPhone({ className }: { className?: string }) {
   )
 }
 
+function IconMail({ className }: { className?: string }) {
+  return (
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className={className} aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+    </svg>
+  )
+}
+
 function IconInstagram({ className }: { className?: string }) {
   return (
     <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className={className} aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -66,6 +74,13 @@ export default function Footer() {
             >
               <IconPhone className="w-4 h-4 shrink-0" />
               {serviceInfo.phone}
+            </a>
+            <a
+              href={`mailto:${serviceInfo.email}`}
+              className="flex items-center gap-2.5 text-sm text-beige/80 hover:text-oro transition-colors duration-150"
+            >
+              <IconMail className="w-4 h-4 shrink-0" />
+              {serviceInfo.email}
             </a>
           </div>
 
