@@ -1,5 +1,4 @@
 import { serviceInfo } from '../constants'
-import logo from '../assets/logo.png'
 
 function IconMap({ className }: { className?: string }) {
   return (
