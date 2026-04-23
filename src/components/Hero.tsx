@@ -1,5 +1,5 @@
 import { serviceInfo } from '../constants'
-import heroImg from '../assets/hero.png'
+import heroImg from '../assets/hero.jpg'
 import { Link } from 'react-router'
 
 export function HeroSection() {
