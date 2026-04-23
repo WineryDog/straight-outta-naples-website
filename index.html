@@ -13,6 +13,25 @@
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <script>
+      // Decode the path encoded by public/404.html and restore it via history API
+      // so React Router receives the correct URL without a server round-trip.
+      (function (l) {
+        if (l.search[1] === 'p') {
+          var params = l.search.slice(1).split('&').reduce(function (o, s) {
+            var i = s.indexOf('=');
+            o[decodeURIComponent(s.slice(0, i))] = s.slice(i + 1).replace(/~and~/g, '&');
+            return o;
+          }, {});
+          window.history.replaceState(
+            null, null,
+            '/' + params.p.replace(/~and~/g, '&') +
+            (params.q ? '?' + params.q.replace(/~and~/g, '&') : '') +
+            l.hash
+          );
+        }
+      }(window.location));
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
