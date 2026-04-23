@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Straight Outta Naples</title>
+    <script>
+      // GitHub Pages SPA fix — encode the current path as a query string
+      // so the server serves index.html instead of 404-ing.
+      // The redirect is decoded by the script in index.html.
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.host + '/?p=' +
+        l.pathname.slice(1).replace(/&/g, '~and~') +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
