@@ -1,13 +1,15 @@
 import { useState} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+
+// @ts-ignore
 import 'swiper/css';
-import img1 from '../assets/menu-1.jpg'
-import img2 from '../assets/menu-2.jpg'
-import img3 from '../assets/menu-3.jpg'
-import img4 from '../assets/menu-4.jpg'
-import img5 from '../assets/menu-5.jpg'
-import img6 from '../assets/menu-6.jpg'
+import img1 from '../assets/menu-1.webp'
+import img2 from '../assets/menu-2.webp'
+import img3 from '../assets/menu-3.webp'
+import img4 from '../assets/menu-4.webp'
+import img5 from '../assets/menu-5.webp'
+import img6 from '../assets/menu-6.webp'
 
 const SLIDES = [
   { src: img1, alt: 'Autentica Pizza Margherita' },
@@ -18,7 +20,7 @@ const SLIDES = [
   { src: img6, alt: 'Ingredienti freschi' },
 ];
 
-export  function MenuSlideshow() {
+export function MenuSlideshow() {
 
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [current, setCurrent] = useState(0);
@@ -51,6 +53,7 @@ export  function MenuSlideshow() {
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
+            //@ts-ignore
             onSwiper={setSwiperInstance}
             onSlideChange={(swiper) => setCurrent(swiper.realIndex)}
             className="rounded-2xl overflow-hidden"
@@ -74,6 +77,7 @@ export  function MenuSlideshow() {
           {/* Arrow — prev */}
           <button
             type="button"
+            //@ts-ignore
             onClick={() => swiperInstance?.slidePrev()}
             aria-label="Previous slide"
             className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md opacity-0 group-hover:opacity-100 hover:bg-black/60 transition-all duration-300 active:scale-95 shadow-lg"
@@ -86,6 +90,7 @@ export  function MenuSlideshow() {
           {/* Arrow — next */}
           <button
             type="button"
+            //@ts-ignore
             onClick={() => swiperInstance?.slideNext()}
             aria-label="Next slide"
             className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md opacity-0 group-hover:opacity-100 hover:bg-black/60 transition-all duration-300 active:scale-95 shadow-lg"
@@ -105,6 +110,7 @@ export  function MenuSlideshow() {
               role="tab"
               aria-label={`Go to slide ${i + 1}`}
               aria-selected={i === current}
+                          //@ts-ignore
               onClick={() => swiperInstance?.slideToLoop(i)}
               className="group p-2 flex items-center justify-center focus:outline-none"
             >

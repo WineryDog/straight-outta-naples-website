@@ -1,5 +1,4 @@
 import { serviceInfo } from '../constants'
-import logo from '../assets/logo.png'
 
 function IconMap({ className }: { className?: string }) {
   return (
@@ -13,6 +12,14 @@ function IconPhone({ className }: { className?: string }) {
   return (
     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" className={className} aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <path d="M18.07 22h.35c.47-.02.9-.26 1.17-.64l2.14-3.09c.23-.33.32-.74.24-1.14s-.31-.74-.64-.97l-4.64-3.09a1.47 1.47 0 0 0-.83-.25c-.41 0-.81.16-1.1.48l-1.47 1.59c-.69-.43-1.61-1.07-2.36-1.82-.72-.72-1.37-1.64-1.82-2.36l1.59-1.47c.54-.5.64-1.32.23-1.93L7.84 2.67c-.22-.33-.57-.57-.97-.64a1.46 1.46 0 0 0-1.13.24L2.65 4.41c-.39.27-.62.7-.64 1.17-.03.69-.16 6.9 4.68 11.74 4.35 4.35 9.81 4.69 11.38 4.69ZM6.88 10.05c-.16.15-.21.39-.11.59.05.09 1.15 2.24 2.74 3.84 1.6 1.6 3.75 2.7 3.84 2.75.2.1.44.06.59-.11l1.99-2.15 3.86 2.57-1.7 2.46c-1.16 0-6.13-.24-9.99-4.1S4 7.06 4 5.91l2.46-1.7 2.57 3.86-2.15 1.99Z" />
+    </svg>
+  )
+}
+
+function IconMail({ className }: { className?: string }) {
+  return (
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className={className} aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
     </svg>
   )
 }
@@ -67,6 +74,13 @@ export default function Footer() {
             >
               <IconPhone className="w-4 h-4 shrink-0" />
               {serviceInfo.phone}
+            </a>
+            <a
+              href={`mailto:${serviceInfo.email}`}
+              className="flex items-center gap-2.5 text-sm text-beige/80 hover:text-oro transition-colors duration-150"
+            >
+              <IconMail className="w-4 h-4 shrink-0" />
+              {serviceInfo.email}
             </a>
           </div>
 

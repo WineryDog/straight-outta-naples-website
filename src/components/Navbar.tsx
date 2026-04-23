@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.webp'
 
 const NAV_LINKS = [
   { label: 'Menu',         to: '/menu' },
   { label: 'Reservations', to: '/reservations' },
   { label: 'Functions',    to: '/functions' },
-  { label: 'Order Online', to: '/order' },
+  { label: 'Order', to: '/order' },
   { label: 'Events', to: '/events' },
+  { label: 'Catering', to: '/catering' }
 ]
 
 export default function Navbar() {
@@ -77,7 +78,7 @@ export default function Navbar() {
         id="mobile-menu"
         className={[
           'md:hidden overflow-hidden transition-all duration-300 ease-in-out',
-          open ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0',
+          open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0',
         ].join(' ')}
       >
         <ul className="flex flex-col px-4 pb-4 gap-1 bg-crema border-t border-beige">
