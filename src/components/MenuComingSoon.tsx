@@ -37,7 +37,7 @@ export default function MenuComingSoon() {
       {/* Titolo e Descrizione */}
       <div className="max-w-2xl mx-auto mb-16">
         <h1 className="font-display text-3xl md:text-4xl text-stone-900 mb-6">
-          Our menu is taking shape...
+          Our menu is <span className='text-amber-700'>taking shape...</span>
         </h1>
         <p className="font-sans text-base md:text-lg text-stone-600 leading-relaxed mb-4">
           We are finalizing a selection of dishes that celebrate the true essence of Italian cuisine. 
