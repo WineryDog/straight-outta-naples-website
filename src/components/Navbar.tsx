@@ -15,12 +15,12 @@ export default function Navbar() {
   const { pathname } = useLocation()
 
   return (
-    <header className="sticky top-0 z-50 bg-crema border-b border-beige">
+    <header className="sticky top-0 z-50 bg-crema-gray border-b border-beige">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
 
         {/* Logo */}
         <Link to="/" onClick={() => setOpen(false)} className="shrink-0">
-          <img src={logo} alt="Logo" className="h-10 w-auto" />
+          <img src={logo} alt="Logo" className="h-13 w-auto" />
         </Link>
 
         {/* Desktop links */}

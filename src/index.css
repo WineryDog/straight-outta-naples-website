@@ -13,6 +13,7 @@
   --palette-oro-principale:  #CDA972;
   --palette-oro-brillante:   #E8BF6C;
   --palette-sfondo-crema:    #F8F8F8;
+  --palette-sfondo-crema-gray:    #e7e4e4;
   --palette-beige-neutro:    #D8C7A8;
   --palette-testo-scuro:     #3A3A3A;
 }
@@ -38,6 +39,7 @@
   --color-oro:      var(--palette-oro-principale);
   --color-oro-bright: var(--palette-oro-brillante);
   --color-crema:    var(--palette-sfondo-crema);
+  --color-crema-gray:    var(--palette-sfondo-crema-gray);
   --color-beige:    var(--palette-beige-neutro);
   --color-testo:    var(--palette-testo-scuro);
 

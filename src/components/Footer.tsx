@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <img src={logo} alt={`${serviceInfo.name} logo`} className="h-12 w-auto" />
+            <h3 className="font-display text-lg text-oro-bright tracking-wide">{serviceInfo.name}</h3>
             <p className="text-sm text-beige/70 leading-relaxed">
               {serviceInfo.description || 'Authentic Neapolitan cuisine in the heart of Melbourne.'}
             </p>
