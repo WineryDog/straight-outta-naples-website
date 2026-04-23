@@ -7,7 +7,7 @@ import img4 from '../assets/interior-4.png'
 
 export default function EventsCta() {
   return (
-    <section className="bg-crema py-16 sm:py-20 lg:py-28 overflow-hidden">
+    <section className="bg-marrone py-16 sm:py-20 lg:py-28 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
@@ -71,15 +71,15 @@ export default function EventsCta() {
           {/* ── Content column ───────────────────────────── */}
           <div className="w-full lg:w-1/2 flex flex-col gap-5 text-center lg:text-left">
 
-            <p className="font-sans text-xs tracking-[0.2em] uppercase text-marrone font-semibold">
+            <p className="font-sans text-xs tracking-[0.2em] uppercase text-oro font-semibold">
               Celebrate with us
             </p>
 
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-bruno leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-crema leading-tight">
               A slice of Naples for your next celebration
             </h2>
 
-            <p className="font-sans text-base text-testo/80 leading-relaxed max-w-lg mx-auto lg:mx-0">
+            <p className="font-sans text-base text-crema/80 leading-relaxed max-w-lg mx-auto lg:mx-0">
               Host your next event with us and treat your guests to the authentic taste of
               Neapolitan pizza, crafted cocktails, and warm Italian hospitality. Perfect for
               birthdays, intimate gatherings, and corporate dinners.
