@@ -44,10 +44,16 @@ export function HeroSection() {
             Menu
           </Link>
           <Link
-            to="/order"
+            to="/reservations"
             className="min-h-[48px] flex items-center justify-center px-8 py-3 rounded-full border-2 border-white/70 text-white font-sans font-semibold text-sm tracking-wide transition-colors duration-150 hover:bg-white/10 active:scale-95"
           >
             Book Now
+          </Link>
+                    <Link
+            to="/order"
+            className="min-h-[48px] flex items-center justify-center px-8 py-3 rounded-full border-2 border-white/70 text-white font-sans font-semibold text-sm tracking-wide transition-colors duration-150 hover:bg-white/10 active:scale-95"
+          >
+            Order Online
           </Link>
         </div>
       </div>
